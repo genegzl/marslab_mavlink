@@ -5682,6 +5682,15 @@
       <field type="uint8_t" name="new_orientation" enum="MAV_SENSOR_ORIENTATION">orientation after calibration.</field>
       <field type="float" name="scale_factor">field radius correction factor</field>
     </message>
+    <!-- 217 Airspeed Sensor Data from PX4 -->
+    <message id="229" name="AIRSPEED_M_S">
+      <description>Publishing airspeed sensor data from PX4 FCU</description>
+      <field type="uint64_t" name="time_usec" units="us">Time since system start (microseconds).</field>
+      <field type="float" name="indicated_airspeed_m_s">Indicated airspeed in m/s.</field>
+      <field type="float" name="true_airspeed_m_s">True filtered airspeed in m/s.</field>
+      <field type="float" name="air_temperature_celsius">Air temperature in degrees celsius, -1000 if unknown.</field>
+      <field type="float" name="confidence">Confidence value from 0 to 1 for this sensor.</field>
+    </message>    
     <!-- 225 EFI_STATUS imported from ardupilotmega.xml -->
     <message id="225" name="EFI_STATUS">
       <description>EFI status output</description>
